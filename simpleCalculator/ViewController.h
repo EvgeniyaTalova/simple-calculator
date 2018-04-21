@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController {
-    bool operatorPressed;
-    bool add;
-    bool multiplication;
+    BOOL operatorPressed;
+    BOOL add;
+    BOOL multiplication;
     NSString *firstEntry;
     NSString *secondEntry;
 

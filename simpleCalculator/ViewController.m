@@ -68,7 +68,7 @@
 }
 
 - (IBAction)numberPressed:(UIButton*)sender;{
-    int tag = (int) sender.tag;
+    NSInteger tag = sender.tag;
     
     if (operatorPressed == FALSE) {
         if (firstEntry == NULL) {
