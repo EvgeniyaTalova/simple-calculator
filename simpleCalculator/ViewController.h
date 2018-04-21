@@ -12,25 +12,12 @@
     BOOL operatorPressed;
     BOOL add;
     BOOL multiplication;
+    BOOL devide;
+    BOOL substract;
     NSString *firstEntry;
     NSString *secondEntry;
 
 }
-
-@property (strong, nonatomic) IBOutlet UILabel *labelOutput;
-
-- (IBAction)clearPressed:(id)sender;
-- (IBAction)addPressed:(id)sender;
-- (IBAction)minusPressed:(id)sender;
-- (IBAction)equalsPressed:(id)sender;
-- (IBAction)multiplicationPressed:(id)sender;
-
-- (IBAction)numberPressed:(UIButton*)sender;
-
-
-
-
-
 
 @end
 

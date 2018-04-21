@@ -10,6 +10,16 @@
 
 @interface ViewController ()
 
+@property (strong, nonatomic) IBOutlet UILabel *labelOutput;
+
+- (IBAction)clearPressed:(id)sender;
+- (IBAction)addPressed:(id)sender;
+- (IBAction)minusPressed:(id)sender;
+- (IBAction)equalsPressed:(id)sender;
+- (IBAction)multiplicationPressed:(id)sender;
+
+- (IBAction)numberPressed:(UIButton*)sender;
+
 @end
 
 @implementation ViewController
@@ -37,34 +47,61 @@
 }
 
 - (IBAction)addPressed:(id)sender {
-    add = TRUE;
-    operatorPressed = TRUE;
+    add = YES;
+    operatorPressed = YES;
+    multiplication = NO;
+    devide = NO;
+    substract = NO;
 }
 
 - (IBAction)minusPressed:(id)sender {
     add = FALSE;
+    substract = YES;
+    multiplication = NO;
+    devide = NO;
     operatorPressed = TRUE;
 }
 
 - (IBAction)equalsPressed:(id)sender {
-    if (!add) {
-        NSInteger outputNum = [firstEntry intValue] - [secondEntry intValue];
+    NSInteger outputNum;
+    
+    if (!add && !devide && !multiplication && substract) {
+         outputNum = [firstEntry intValue] - [secondEntry intValue];
         _labelOutput.text = [NSString stringWithFormat: @"%li",(long)outputNum];
     }
-    else if (add){
-        NSInteger outputNum = [firstEntry intValue] + [secondEntry intValue];
+    else if (add && !devide && !multiplication && !substract){
+         outputNum = [firstEntry intValue] + [secondEntry intValue];
         _labelOutput.text = [NSString stringWithFormat: @"%li",(long)outputNum];
-    } else
+    } else if (!add && !devide && multiplication && !substract) {
+         outputNum = [firstEntry intValue] * [secondEntry intValue];
+        _labelOutput.text = [NSString stringWithFormat:@"%li", (long)outputNum];
+    } else {
+         outputNum = [firstEntry intValue] / [secondEntry intValue];
+        _labelOutput.text = [NSString stringWithFormat:@"%li", (long)outputNum];
+    }
     
     operatorPressed = FALSE;
-    firstEntry = NULL;
+    firstEntry = [NSString stringWithFormat:@"%li", (long)outputNum];
     secondEntry = NULL;
 }
 - (IBAction)multiplicationPressed:(id)sender {
     multiplication = YES;
     add = NO;
     operatorPressed = YES;
-  
+    substract = NO;
+    devide = NO;
+}
+
+- (IBAction)dividePressed:(UIButton *)sender {
+    devide = YES;
+    operatorPressed = YES;
+    add = NO;
+    multiplication = NO;
+    substract = NO;
+}
+
+- (IBAction)persentPressed:(UIButton *)sender {
+    
 }
 
 - (IBAction)numberPressed:(UIButton*)sender;{
@@ -72,21 +109,21 @@
     
     if (operatorPressed == FALSE) {
         if (firstEntry == NULL) {
-            firstEntry = [NSString stringWithFormat: @"%i",tag];
+            firstEntry = [NSString stringWithFormat: @"%li",(long)tag];
             _labelOutput.text = firstEntry;
         }
         else {
-            firstEntry = [NSString stringWithFormat: @"%@%i",firstEntry,tag];
+            firstEntry = [NSString stringWithFormat: @"%@%li",firstEntry,(long)tag];
             _labelOutput.text = firstEntry;
         }
     }
     else {
         if (secondEntry == NULL) {
-            secondEntry = [NSString stringWithFormat:@"%i",tag];
+            secondEntry = [NSString stringWithFormat:@"%li",(long)tag];
             _labelOutput.text = secondEntry;
         }
         else {
-            secondEntry = [NSString stringWithFormat:@"%@%i",secondEntry,tag];
+            secondEntry = [NSString stringWithFormat:@"%@%li",secondEntry,(long)tag];
             _labelOutput.text = secondEntry;
         }
     }
