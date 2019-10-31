@@ -10,7 +10,7 @@
 
 @interface ViewController ()
 
-@property (strong, nonatomic) IBOutlet UILabel *labelOutput;
+@property (weak, nonatomic) IBOutlet UILabel *labelOutput;
 
 - (IBAction)clearPressed:(id)sender;
 - (IBAction)addPressed:(id)sender;
@@ -27,20 +27,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    operatorPressed = FALSE;
+    operatorPressed = NO;
     firstEntry = NULL;
     secondEntry = NULL;
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-
 - (IBAction)clearPressed:(id)sender {
-    operatorPressed = FALSE;
+    operatorPressed = NO;
     _labelOutput.text = NULL;
     firstEntry = NULL;
     secondEntry = NULL;
@@ -55,7 +53,7 @@
 }
 
 - (IBAction)minusPressed:(id)sender {
-    add = FALSE;
+    add = NO;
     substract = YES;
     multiplication = NO;
     devide = NO;
@@ -80,10 +78,11 @@
         _labelOutput.text = [NSString stringWithFormat:@"%li", (long)outputNum];
     }
     
-    operatorPressed = FALSE;
+    operatorPressed = NO;
     firstEntry = [NSString stringWithFormat:@"%li", (long)outputNum];
     secondEntry = NULL;
 }
+
 - (IBAction)multiplicationPressed:(id)sender {
     multiplication = YES;
     add = NO;
@@ -100,14 +99,12 @@
     substract = NO;
 }
 
-- (IBAction)persentPressed:(UIButton *)sender {
-    
-}
+- (IBAction)persentPressed:(UIButton *)sender { }
 
 - (IBAction)numberPressed:(UIButton*)sender;{
     NSInteger tag = sender.tag;
     
-    if (operatorPressed == FALSE) {
+    if (operatorPressed == NO) {
         if (firstEntry == NULL) {
             firstEntry = [NSString stringWithFormat: @"%li",(long)tag];
             _labelOutput.text = firstEntry;

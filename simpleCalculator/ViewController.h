@@ -16,7 +16,6 @@
     BOOL substract;
     NSString *firstEntry;
     NSString *secondEntry;
-
 }
 
 @end
