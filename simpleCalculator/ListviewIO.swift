@@ -9,7 +9,7 @@
 import Foundation
 
 protocol ListViewInput: AnyObject {
-    func display(viewModels: ListItem)
+    func display(viewModels: [ListItem])
 }
 
 protocol ListViewOutput: AnyObject {

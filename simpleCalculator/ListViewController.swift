@@ -18,6 +18,12 @@ class ListViewController: UITableViewController {
     }
 }
 
+extension ListViewController: ListViewInput {
+    func display(viewModels: [ListItem]) {
+        /// Display items
+    }
+}
+
 private extension ListViewController {
     func comonInit() { }
 }
