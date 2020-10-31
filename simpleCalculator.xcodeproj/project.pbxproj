@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE906834254DCD7100AFABAD /* ItemsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE906833254DCD7100AFABAD /* ItemsService.swift */; };
+		EE906837254DCD9F00AFABAD /* ItemsServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE906836254DCD9F00AFABAD /* ItemsServiceMock.swift */; };
+		EE90683B254DCF2800AFABAD /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE90683A254DCF2800AFABAD /* Assembly.swift */; };
 		EEC2820D207E933C0035C8C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC2820C207E933C0035C8C8 /* main.m */; };
 		EEC28210207E933C0035C8C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC2820F207E933C0035C8C8 /* AppDelegate.m */; };
 		EEC28213207E933C0035C8C8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC28212207E933C0035C8C8 /* ViewController.m */; };
@@ -24,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE906833254DCD7100AFABAD /* ItemsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsService.swift; sourceTree = "<group>"; };
+		EE906836254DCD9F00AFABAD /* ItemsServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsServiceMock.swift; sourceTree = "<group>"; };
+		EE90683A254DCF2800AFABAD /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
 		EEC28208207E933C0035C8C8 /* simpleCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpleCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEC2820C207E933C0035C8C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EEC2820E207E933C0035C8C8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -56,6 +62,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE906839254DCF0E00AFABAD /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				EE90683A254DCF2800AFABAD /* Assembly.swift */,
+			);
+			name = Assembly;
+			sourceTree = "<group>";
+		};
 		EEC281FF207E933B0035C8C8 = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +169,7 @@
 		EEE53A69254D7AD40005D80C /* ListScreen */ = {
 			isa = PBXGroup;
 			children = (
+				EE906839254DCF0E00AFABAD /* Assembly */,
 				EEE53A67254D7ABE0005D80C /* View */,
 				EEE53A66254D7AB40005D80C /* Interactor */,
 				EEE53A65254D7AAC0005D80C /* Presenter */,
@@ -165,6 +180,8 @@
 		EEE53A6A254D7ADE0005D80C /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				EE906833254DCD7100AFABAD /* ItemsService.swift */,
+				EE906836254DCD9F00AFABAD /* ItemsServiceMock.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -262,7 +279,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE906834254DCD7100AFABAD /* ItemsService.swift in Sources */,
+				EE906837254DCD9F00AFABAD /* ItemsServiceMock.swift in Sources */,
 				EEE53A81254D928D0005D80C /* ListItem.swift in Sources */,
+				EE90683B254DCF2800AFABAD /* Assembly.swift in Sources */,
 				EEE53A77254D7B300005D80C /* ListInteractorIO.swift in Sources */,
 				EEE53A74254D7B230005D80C /* ListInteractor.swift in Sources */,
 				EEC28213207E933C0035C8C8 /* ViewController.m in Sources */,
