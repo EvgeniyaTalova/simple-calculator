@@ -58,10 +58,8 @@
 		EEC2820A207E933C0035C8C8 /* simpleCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				EEC2820E207E933C0035C8C8 /* AppDelegate.h */,
-				EEC2820F207E933C0035C8C8 /* AppDelegate.m */,
-				EEC28211207E933C0035C8C8 /* ViewController.h */,
-				EEC28212207E933C0035C8C8 /* ViewController.m */,
+				EEE53A5F254D758F0005D80C /* Application */,
+				EEE53A60254D75B10005D80C /* PresentationLayer */,
 				EEC28214207E933C0035C8C8 /* Main.storyboard */,
 				EEC28217207E933C0035C8C8 /* Assets.xcassets */,
 				EEC28219207E933C0035C8C8 /* LaunchScreen.storyboard */,
@@ -77,6 +75,24 @@
 				EEC2820C207E933C0035C8C8 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EEE53A5F254D758F0005D80C /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				EEC2820E207E933C0035C8C8 /* AppDelegate.h */,
+				EEC2820F207E933C0035C8C8 /* AppDelegate.m */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		EEE53A60254D75B10005D80C /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				EEC28211207E933C0035C8C8 /* ViewController.h */,
+				EEC28212207E933C0035C8C8 /* ViewController.m */,
+			);
+			name = PresentationLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +139,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
