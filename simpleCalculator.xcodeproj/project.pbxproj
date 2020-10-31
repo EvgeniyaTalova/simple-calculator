@@ -10,6 +10,7 @@
 		EE906834254DCD7100AFABAD /* ItemsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE906833254DCD7100AFABAD /* ItemsService.swift */; };
 		EE906837254DCD9F00AFABAD /* ItemsServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE906836254DCD9F00AFABAD /* ItemsServiceMock.swift */; };
 		EE90683B254DCF2800AFABAD /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE90683A254DCF2800AFABAD /* Assembly.swift */; };
+		EE90683F254DD80100AFABAD /* ListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE90683E254DD80100AFABAD /* ListItemCell.swift */; };
 		EEC2820D207E933C0035C8C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC2820C207E933C0035C8C8 /* main.m */; };
 		EEC28210207E933C0035C8C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC2820F207E933C0035C8C8 /* AppDelegate.m */; };
 		EEC28213207E933C0035C8C8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC28212207E933C0035C8C8 /* ViewController.m */; };
@@ -30,6 +31,7 @@
 		EE906833254DCD7100AFABAD /* ItemsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsService.swift; sourceTree = "<group>"; };
 		EE906836254DCD9F00AFABAD /* ItemsServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsServiceMock.swift; sourceTree = "<group>"; };
 		EE90683A254DCF2800AFABAD /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
+		EE90683E254DD80100AFABAD /* ListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemCell.swift; sourceTree = "<group>"; };
 		EEC28208207E933C0035C8C8 /* simpleCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpleCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEC2820C207E933C0035C8C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EEC2820E207E933C0035C8C8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -68,6 +70,14 @@
 				EE90683A254DCF2800AFABAD /* Assembly.swift */,
 			);
 			name = Assembly;
+			sourceTree = "<group>";
+		};
+		EE90683D254DD7EF00AFABAD /* views */ = {
+			isa = PBXGroup;
+			children = (
+				EE90683E254DD80100AFABAD /* ListItemCell.swift */,
+			);
+			name = views;
 			sourceTree = "<group>";
 		};
 		EEC281FF207E933B0035C8C8 = {
@@ -160,6 +170,7 @@
 		EEE53A67254D7ABE0005D80C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EE90683D254DD7EF00AFABAD /* views */,
 				EEE53A79254D7B430005D80C /* ListViewController.swift */,
 				EEE53A7C254D7B520005D80C /* ListviewIO.swift */,
 			);
@@ -293,6 +304,7 @@
 				EEE53A6D254D7AFB0005D80C /* ListPresenter.swift in Sources */,
 				EEE53A7A254D7B430005D80C /* ListViewController.swift in Sources */,
 				EEC2820D207E933C0035C8C8 /* main.m in Sources */,
+				EE90683F254DD80100AFABAD /* ListItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

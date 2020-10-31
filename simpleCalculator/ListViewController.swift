@@ -25,13 +25,13 @@ class ListViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell",
-                                                 for: indexPath)
+                                                 for: indexPath) as? ListItemCell
         let viewModel = viewModels[indexPath.row]
 
-        cell.textLabel?.text = viewModel.title
-        cell.detailTextLabel?.text = viewModel.subtitle
+        cell?.textLabel?.text = viewModel.title
+        cell?.detailTextLabel?.text = viewModel.subtitle
 
-        return cell
+        return cell ?? UITableViewCell()
     }
 }
 
@@ -44,7 +44,7 @@ extension ListViewController: ListViewInput {
 
 private extension ListViewController {
     func comonInit() {
-        tableView.register(UITableViewCell.self,
+        tableView.register(ListItemCell.self,
                            forCellReuseIdentifier: "Cell")
     }
 }
