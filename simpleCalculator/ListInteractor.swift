@@ -10,8 +10,18 @@ import Foundation
 
 final class ListInteractor {
 
+    var output: ListInteractorOutput?
+
+    private let itemService: ItemsService
+
+    init(itemService: ItemsService) {
+        self.itemService = itemService
+    }
 }
 
 extension ListInteractor: ListInteractorInput {
-
+    func fetchItems() {
+        let items = itemService.fetchItems()
+        output?.didFetchItems(items: items)
+    }
 }
