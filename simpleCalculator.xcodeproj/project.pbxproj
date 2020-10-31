@@ -13,6 +13,14 @@
 		EEC28216207E933C0035C8C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEC28214207E933C0035C8C8 /* Main.storyboard */; };
 		EEC28218207E933C0035C8C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEC28217207E933C0035C8C8 /* Assets.xcassets */; };
 		EEC2821B207E933C0035C8C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEC28219207E933C0035C8C8 /* LaunchScreen.storyboard */; };
+		EEE53A6D254D7AFB0005D80C /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE53A6C254D7AFB0005D80C /* ListPresenter.swift */; };
+		EEE53A70254D7B140005D80C /* PresenterIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE53A6F254D7B140005D80C /* PresenterIO.swift */; };
+		EEE53A74254D7B230005D80C /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE53A73254D7B230005D80C /* ListInteractor.swift */; };
+		EEE53A77254D7B300005D80C /* ListInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE53A76254D7B300005D80C /* ListInteractorIO.swift */; };
+		EEE53A7A254D7B430005D80C /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE53A79254D7B430005D80C /* ListViewController.swift */; };
+		EEE53A7D254D7B520005D80C /* ListviewIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE53A7C254D7B520005D80C /* ListviewIO.swift */; };
+		EEE53A81254D928D0005D80C /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE53A80254D928D0005D80C /* ListItem.swift */; };
+		EEE53A85254D93BC0005D80C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE53A84254D93BC0005D80C /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +34,15 @@
 		EEC28217207E933C0035C8C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEC2821A207E933C0035C8C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EEC2821C207E933C0035C8C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEE53A6B254D7AFA0005D80C /* simpleCalculator-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "simpleCalculator-Bridging-Header.h"; sourceTree = "<group>"; };
+		EEE53A6C254D7AFB0005D80C /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
+		EEE53A6F254D7B140005D80C /* PresenterIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterIO.swift; sourceTree = "<group>"; };
+		EEE53A73254D7B230005D80C /* ListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
+		EEE53A76254D7B300005D80C /* ListInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractorIO.swift; sourceTree = "<group>"; };
+		EEE53A79254D7B430005D80C /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		EEE53A7C254D7B520005D80C /* ListviewIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListviewIO.swift; sourceTree = "<group>"; };
+		EEE53A80254D928D0005D80C /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		EEE53A84254D93BC0005D80C /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +75,7 @@
 		EEC2820A207E933C0035C8C8 /* simpleCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				EEE53A61254D77BD0005D80C /* Viper */,
 				EEE53A5F254D758F0005D80C /* Application */,
 				EEE53A60254D75B10005D80C /* PresentationLayer */,
 				EEC28214207E933C0035C8C8 /* Main.storyboard */,
@@ -89,10 +107,82 @@
 		EEE53A60254D75B10005D80C /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				EEE53A6B254D7AFA0005D80C /* simpleCalculator-Bridging-Header.h */,
 				EEC28211207E933C0035C8C8 /* ViewController.h */,
 				EEC28212207E933C0035C8C8 /* ViewController.m */,
 			);
 			name = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		EEE53A61254D77BD0005D80C /* Viper */ = {
+			isa = PBXGroup;
+			children = (
+				EEE53A6A254D7ADE0005D80C /* Service */,
+				EEE53A69254D7AD40005D80C /* ListScreen */,
+			);
+			name = Viper;
+			sourceTree = "<group>";
+		};
+		EEE53A65254D7AAC0005D80C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				EEE53A7F254D927E0005D80C /* viewModel */,
+				EEE53A6C254D7AFB0005D80C /* ListPresenter.swift */,
+				EEE53A6F254D7B140005D80C /* PresenterIO.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		EEE53A66254D7AB40005D80C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EEE53A83254D93AE0005D80C /* entity */,
+				EEE53A73254D7B230005D80C /* ListInteractor.swift */,
+				EEE53A76254D7B300005D80C /* ListInteractorIO.swift */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		EEE53A67254D7ABE0005D80C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EEE53A79254D7B430005D80C /* ListViewController.swift */,
+				EEE53A7C254D7B520005D80C /* ListviewIO.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		EEE53A69254D7AD40005D80C /* ListScreen */ = {
+			isa = PBXGroup;
+			children = (
+				EEE53A67254D7ABE0005D80C /* View */,
+				EEE53A66254D7AB40005D80C /* Interactor */,
+				EEE53A65254D7AAC0005D80C /* Presenter */,
+			);
+			name = ListScreen;
+			sourceTree = "<group>";
+		};
+		EEE53A6A254D7ADE0005D80C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		EEE53A7F254D927E0005D80C /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EEE53A80254D928D0005D80C /* ListItem.swift */,
+			);
+			name = viewModel;
+			sourceTree = "<group>";
+		};
+		EEE53A83254D93AE0005D80C /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				EEE53A84254D93BC0005D80C /* Item.swift */,
+			);
+			name = entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +220,7 @@
 				TargetAttributes = {
 					EEC28207207E933B0035C8C8 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 1200;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -171,8 +262,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEE53A81254D928D0005D80C /* ListItem.swift in Sources */,
+				EEE53A77254D7B300005D80C /* ListInteractorIO.swift in Sources */,
+				EEE53A74254D7B230005D80C /* ListInteractor.swift in Sources */,
 				EEC28213207E933C0035C8C8 /* ViewController.m in Sources */,
+				EEE53A70254D7B140005D80C /* PresenterIO.swift in Sources */,
 				EEC28210207E933C0035C8C8 /* AppDelegate.m in Sources */,
+				EEE53A85254D93BC0005D80C /* Item.swift in Sources */,
+				EEE53A7D254D7B520005D80C /* ListviewIO.swift in Sources */,
+				EEE53A6D254D7AFB0005D80C /* ListPresenter.swift in Sources */,
+				EEE53A7A254D7B430005D80C /* ListViewController.swift in Sources */,
 				EEC2820D207E933C0035C8C8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,11 +390,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = simpleCalculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.EvgeniyaTalova.simpleCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "simpleCalculator/simpleCalculator-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -304,11 +407,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = simpleCalculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.EvgeniyaTalova.simpleCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "simpleCalculator/simpleCalculator-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
